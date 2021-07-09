@@ -1,19 +1,25 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const logger = require("morgan");
+const mongoose = require("mongoose");
 
-const PORT = process.env.PORT || 3000
+
+const PORT = process.env.PORT || 8001;
+
+const db = require("./models");
+
 
 const app = express();
 
-app.use(logger('dev'));
+const databaseName = "workout_db"
+
+app.use(logger("dev"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/WorkoutTracker", {
     useNewUrlParser: true,
     useFindAndModify: false
 });
