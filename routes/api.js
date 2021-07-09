@@ -7,7 +7,7 @@ router.post("/workouts", ({ body }, res) => {
             res.json(dbWorkout);
         })
         .catch(err => {
-            res.json(err);
+            res.status(400).json(err);
         });
 
     res.send('Received a workout')
@@ -19,7 +19,7 @@ router.get("/workouts", (req, res) => {
             res.json(dbWorkout);
         })
         .catch(err => {
-            res.json(err);
+            res.status(400).json(err);
         });
 });
 
@@ -29,7 +29,7 @@ router.get("/workouts/range", (req, res) => {
             res.json(dbWorkout);
         })
         .catch(err => {
-            res.json(err);
+            res.status(400).json(err);
         });
 });
 
@@ -51,7 +51,7 @@ router.put("/workouts/:id", ({ params, body }, res) => {
             res.json(dbWorkout);
         })
         .catch(err => {
-            res.json(err);
+            res.status(400).json(err);
         });
 });
 
