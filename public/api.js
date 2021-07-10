@@ -28,8 +28,7 @@ const API = {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
-        "Accept": 'application/json, text/plain, */*',
-        "Content-Type": 'application/json',
+        "Content-Type": 'application/json'
       },
     });
 
