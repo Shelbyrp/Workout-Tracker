@@ -28,9 +28,9 @@ const API = {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
-        "Content-Type": "application/json",
-        "Accept": 'application/json'
-      }
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json',
+      },
     });
 
     const json = await res.json();
