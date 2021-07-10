@@ -67,7 +67,7 @@ function populateChart(data) {
       labels,
       datasets: [
         {
-          label: 'Pounds',
+          label: 'Weight in Pounds',
           data: pounds,
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
