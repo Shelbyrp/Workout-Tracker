@@ -4,6 +4,10 @@
 
 ## Description
 
+This application has been created as a workout tracker, allowing you to create and track daily workouts. Users are able to log multiple exercises in a workout on a given day. Users can track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, users can track my distance traveled.
+
+Mongo has been used for the database and the application has been deployed on Heroku.
+
 Link to the Heroku application for "Workout Tracker": [view app](https://fathomless-beyond-96409.herokuapp.com/).
 
 ## Table of Contents
@@ -34,6 +38,11 @@ Once the files have been pull down to your preferred repository, run this applic
 
 The datasbase needs to be popluated by running "npm run seed."
 
+![Final result appears as:](./public/img/Workouttracker1.png)
+![Final result appears as:](./public/img/Workouttracker2.png)
+![Final result appears as:](./public/img/Workouttracker3.png)
+![Final result appears as:](./public/img/Workouttracker4.png)
+
 ## License
 
 This project is licensed by the [MIT](https://opensource.org/licenses/MIT) license
@@ -48,13 +57,21 @@ http://expressjs.com/en/api.html
 
 https://www.npmjs.com/package/nodemon
 
-https://handlebarsjs.com/guide/builtin-helpers.html
-
 https://www.npmjs.com/package/express-session
 
 https://www.npmjs.com/package/dotenv
 
 https://www.npmjs.com/package/connect-session-sequelize
+
+https://www.mongodb.com/
+
+https://devcenter.heroku.com/categories/reference
+
+https://docs.mongodb.com/manual/reference/operator/aggregation/addFields/
+
+https://docs.mongodb.com/manual/reference/operator/aggregation/sum/
+
+https://mongoosejs.com/docs/api.html#aggregate_Aggregate
 
 ## Tests
 
