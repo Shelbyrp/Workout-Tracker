@@ -1,20 +1,18 @@
-const Workout = require("../models/workout.js");
 const express = require("express");
 const router = express.Router();
+const Workout = require("../models/workout.js");
 
 router.post("/api/workouts", ({ body }, res) => {
-    Workout.create({})
+    Workout.create(body)
         .then((dbWorkout) => {
             res.json(dbWorkout);
         })
         .catch(({ message }) => {
-            console.log(message);
+            res.status(400).json(err);
         });
 });
 
 router.put("/api/workouts/:id", ({ params, body }, res) => {
-    console.log("PARAMS", body, params);
-
     Workout.findOneAndUpdate(
         { _id: params.id },
         { $push: { exercises: body } },
@@ -24,7 +22,7 @@ router.put("/api/workouts/:id", ({ params, body }, res) => {
             res.json(dbWorkout);
         })
         .catch((err) => {
-            res.json(err);
+            res.status(400).json(err);
         });
 });
 
@@ -35,7 +33,7 @@ router.get("/api/workouts/range", (req, res) => {
             res.json(dbWorkout);
         })
         .catch((err) => {
-            res.json(err);
+            res.status(400).json(err);
         });
 });
 
@@ -45,7 +43,7 @@ router.get("/api/workouts", (req, res) => {
             res.json(dbWorkout);
         })
         .catch((err) => {
-            res.json(err);
+            res.status(400).json(err);
         });
 });
 
