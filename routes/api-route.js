@@ -30,7 +30,7 @@ router.put("/api/workouts/:id", ({ params, body }, res) => {
 
 router.get("/api/workouts/range", (req, res) => {
     Workout.find({})
-        .limit(7)
+        .sort({ _id: -1 }).limit(7)
         .then((dbWorkout) => {
             res.json(dbWorkout);
         })
